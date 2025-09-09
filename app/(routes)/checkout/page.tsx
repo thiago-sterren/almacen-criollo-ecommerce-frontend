@@ -211,7 +211,7 @@ export default function Page() {
             }
 
             if (finalOrder.paymentMethod === "mercado_pago") {
-                if (!json.id || !json.init_point || !json.sandbox_init_point) throw new Error("El servidor no devolvió datos válidos.")
+                if (!json.id || !json.init_point) throw new Error("El servidor no devolvió datos válidos.")
                 toast.success(json.message)
                 sessionStorage.removeItem("checkoutReady")
                 window.location.href = json.init_point // redirige al Checkout Pro
