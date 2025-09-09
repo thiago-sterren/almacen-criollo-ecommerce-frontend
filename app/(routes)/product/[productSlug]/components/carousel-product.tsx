@@ -2,11 +2,13 @@ import Image from "next/image";
 
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
+interface ImageData {
+  id: number;
+  url: string;
+}
+
 interface CarouselProductProps {
-    images?: {
-        id: number;
-        url: string;
-    }[] | null
+    images?: ImageData[] | null;
 }
 
 const CarouselProduct = (props: CarouselProductProps) => {
