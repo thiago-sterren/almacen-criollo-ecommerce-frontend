@@ -90,7 +90,7 @@ const Footer = () => {
                 </div>
                 <Separator className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                    &copy; 2025 <Link href="https://wa.me/5493493520698" className="hover:underline font-bold">SterrenDev</Link>. Todos los derechos reservados
+                    &copy; 2025 <Link href="https://wa.me/5493493520698" target="_blank" className="hover:underline font-bold">SterrenDev</Link>. Todos los derechos reservados
                 </span>
             </div>
         </footer>
