@@ -35,26 +35,26 @@ const categories = [
 ]
 
 const dataFooter = [
-    // {
-    //     id: 1,
-    //     name: "Sobre nosotros",
-    //     link: "#"
-    // },
     {
-        id: 2,
+        id: 1,
         name: "Instagram",
         link: "https://www.instagram.com/almacencriollo_sunchales/"
     },
     {
-        id: 3,
+        id: 2,
         name: "WhatsApp",
         link: "https://wa.me/5493493660838"
     },
     {
-        id: 4,
+        id: 3,
         name: "Contacto del desarrollador de la página",
         link: "https://wa.me/5493493520698"
     },
+    // {
+    //     id: 4,
+    //     name: "Sobre nosotros",
+    //     link: "#"
+    // },
     // {
     //     id: 5,
     //     name: "Política de privacidad",
