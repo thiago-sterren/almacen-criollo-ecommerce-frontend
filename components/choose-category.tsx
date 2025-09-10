@@ -27,7 +27,7 @@ const ChooseCategory = () => {
                             className="relative w-[250px] h-[250px] overflow-hidden rounded-lg">
                                 <Image
                                 src={
-                                    mainImage ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${mainImage.url}` : "/placeholder.jpg"
+                                    mainImage ? mainImage.url : "/placeholder.jpg"
                                 }
                                 alt={`${categoryName} category main image`}
                                 className="transition duration-300 ease-in-out rounded-lg hover:scale-110 object-cover"

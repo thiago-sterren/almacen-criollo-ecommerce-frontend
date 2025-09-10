@@ -31,7 +31,7 @@ const ProductCard = (props: ProductTypeProps) => {
                   <CarouselItem key={image.id} className="group">
                     <div className="flex justify-center items-center w-full h-full">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.url}`}
+                        src={image.url}
                         alt="Product image"
                         width={300}
                         height={300}

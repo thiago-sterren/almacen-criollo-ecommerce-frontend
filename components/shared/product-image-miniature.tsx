@@ -14,7 +14,7 @@ const ProductImageMiniature = (props: ProductImageMiniatureProps) => {
         <div onClick={() => router.push(`/product/${slug}`)} className="cursor-pointer">
             <Image 
             src={
-                url ? `${process.env.NEXT_PUBLIC_BACKEND_URL}${url}` : "/placeholder.jpg"
+                url ? url : "/placeholder.jpg"
             }
             alt="Product image"
             width={100}
