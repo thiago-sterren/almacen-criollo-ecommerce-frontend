@@ -70,7 +70,7 @@ const dataFooter = [
 const Footer = () => {
     return (
         <footer className="mt-4 select-none">
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div className="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between px-5 sm:px-0">
                     <p className="whitespace-nowrap sm:px-5">
                         <span className="font-bold">
