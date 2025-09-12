@@ -112,8 +112,8 @@ export default function Page() {
                         <p className="mt-2">Costo de envío: {formatPrice(ShippingCost())} (A entregar en: {result.address})</p>
                     )}
                     <p className="mt-2 font-bold">Total: {formatPrice(result.totalPrice || 0)}</p>
-                    <p className="mt-7 text-center">Podés guardar este link para seguir el estado de tu orden: 
-                        <Link href={`/order/${result.orderToken}`} className="border-b-2 text-sky-500 border-sky-500 hover:text-sky-600 hover:border-sky-600 transition-colors"> {`https://almacencriollosunchales.vercel.app/order/${result.orderToken}`}</Link>
+                    <p className="mt-7 text-center break-words">Podés guardar este link para seguir el estado de tu orden: 
+                        <Link href={`/order/${result.orderToken}`} className="border-b-2 text-sky-500 border-sky-500 hover:text-sky-600 hover:border-sky-600 transition-colors break-all">{`https://almacencriollosunchales.vercel.app/order/${result.orderToken}`}</Link>
                     </p>
                 </div>
             </div>
