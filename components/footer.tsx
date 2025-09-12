@@ -14,23 +14,28 @@ const categories = [
     },
     {
         id: 3,
+        name: "Otras bebidas",
+        link: "/category/otras-bebidas"
+    },
+    {
+        id: 4,
         name: "Mate",
         link: "/category/mate"
     },
     {
-        id: 4,
+        id: 5,
+        name: "Chocolatería",
+        link: "/category/chocolateria"
+    },
+    {
+        id: 6,
         name: "Cocina",
         link: "/category/cocina"
     },
     {
-        id: 5,
-        name: "Cervecería",
-        link: "/category/cerveceria"
-    },
-    {
-        id: 6,
-        name: "Chocolatería",
-        link: "/category/chocolateria"
+        id: 7,
+        name: "Delicatessen",
+        link: "/category/delicatessen"
     },
 ]
 

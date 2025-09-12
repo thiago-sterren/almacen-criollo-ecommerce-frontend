@@ -91,34 +91,36 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Vino",
     href: "/category/vino",
-    description:
-      "Todas nuestras variedades en tipos y marcas de vino.",
+    description: "Todas nuestras variedades en tipos y marcas de vino.",
   },
   {
     title: "Whisky",
     href: "/category/whisky",
-    description:
-      "Para tu viejo, para hacer un presente, o para vos.",
+    description: "Para tu viejo, para hacer un presente, o para vos.",
+  },
+  {
+    title: "Otras bebidas",
+    href: "/category/otras-bebidas",
+    description: "Para que pases los mejores momentos con tus mejores amigos.",
   },
   {
     title: "Mate",
     href: "/category/mate",
-    description:
-      "Mates, yerba, bolsos materos y todo lo que necesitás para disfrutar esta gran tradición.",
-  },
-  {
-    title: "Cocina",
-    href: "/category/cocina",
-    description: "Comidas y utensilios de cocina para dar vida al chef que llevás por dentro.",
-  },
-  {
-    title: "Cervecería",
-    href: "/category/cerveceria",
-    description: "Para que pases los mejores momentos con tus mejores amigos.",
+    description: "Mates, yerba, bolsos materos y todo lo que necesitás para disfrutar esta gran tradición.",
   },
   {
     title: "Chocolatería",
     href: "/category/chocolateria",
     description: "Siempre vas a quedar bien regalando algo de lo que encontrás en esta sección.",
+  },
+  {
+    title: "Cocina",
+    href: "/category/cocina",
+    description: "Accesorios y utensilios de cocina para dar vida al chef que llevás por dentro.",
+  },
+  {
+    title: "Delicatessen",
+    href: "/category/delicatessen",
+    description: "Gran variedad de embutidos, quesos, escabeches y mucho más para tus picadas.",
   },
 ]
