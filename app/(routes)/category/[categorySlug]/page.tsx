@@ -34,10 +34,10 @@ export default function Page() {
             ) : (
                 <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
                     {result && result.length > 0 && !loading && (
-                        <h1 className="text-3xl font-medium px-2 sm:px-0">{result[0].category.categoryName}</h1>
+                        <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">{result[0].category.categoryName}</h1>
                     )}
                     {loading && result === null && (
-                        <h1 className="text-3xl font-medium px-2 sm:px-0">Cargando categoría...</h1>
+                        <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">Cargando categoría...</h1>
                     )}
                     <Separator />
 
