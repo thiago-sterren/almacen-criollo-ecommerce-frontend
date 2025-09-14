@@ -1,4 +1,4 @@
-export interface PaginationMeta {
+export type PaginationMeta = {
   page: number
   pageSize: number
   pageCount: number

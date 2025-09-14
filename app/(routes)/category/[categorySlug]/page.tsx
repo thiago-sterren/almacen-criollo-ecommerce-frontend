@@ -8,6 +8,7 @@ import { useGetCategoryProducts } from "@/api/useGetCategoryProducts"
 import SkeletonSchema from "@/components/skeleton-schema"
 import { Separator } from "@/components/ui/separator"
 import ProductCard from "./components/product-card"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export default function Page() {
@@ -19,6 +20,8 @@ export default function Page() {
     useEffect(() => {
         setCurrentPage(1)
     }, [categorySlug])
+
+    console.log("meta en el Page:", meta)
     
     return (
         <>
@@ -57,19 +60,17 @@ export default function Page() {
             )}
             {meta && (
                 <div className="flex justify-center mt-6 space-x-4">
-                    <button
-                    disabled={meta.page <= 1}
-                    onClick={() => setCurrentPage(meta.page - 1)}
-                    >
-                        Anterior
-                    </button>
+                    <ChevronLeft
+                    strokeWidth={2}
+                    onClick={() => meta.page > 1 && setCurrentPage(meta.page - 1)}
+                    className={meta.page <= 1 ? "opacity-50 cursor-not-allowed" : "bg-gray-200"}
+                    />
                     <span>Página {meta.page} de {meta.pageCount}</span>
-                    <button
-                    disabled={meta.page >= meta.pageCount}
-                    onClick={() => setCurrentPage(meta.page + 1)}
-                    >
-                        Siguiente
-                    </button>
+                    <ChevronRight
+                    strokeWidth={2}
+                    onClick={() => meta.page < meta.pageCount && setCurrentPage(meta.page + 1)}
+                    className={meta.page >= meta.pageCount ? "opacity-50 cursor-not-allowed" : "bg-gray-200"}
+                    />
                 </div>
             )}
         </>
