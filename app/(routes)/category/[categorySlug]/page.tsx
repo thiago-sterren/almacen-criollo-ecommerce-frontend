@@ -63,13 +63,13 @@ export default function Page() {
                     <ChevronLeft
                     strokeWidth={2}
                     onClick={() => meta.page > 1 && setCurrentPage(meta.page - 1)}
-                    className={meta.page <= 1 ? "opacity-50 cursor-not-allowed" : "bg-gray-200"}
+                    className={meta.page <= 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
                     />
                     <span>Página {meta.page} de {meta.pageCount}</span>
                     <ChevronRight
                     strokeWidth={2}
                     onClick={() => meta.page < meta.pageCount && setCurrentPage(meta.page + 1)}
-                    className={meta.page >= meta.pageCount ? "opacity-50 cursor-not-allowed" : "bg-gray-200"}
+                    className={meta.page >= meta.pageCount ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
                     />
                 </div>
             )}
