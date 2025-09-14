@@ -17,9 +17,9 @@ export default function Home() {
       <Image 
       src="/almacen_criollo_logo.png" 
       alt="Logo image" 
-      width={300} 
-      height={300} 
-      className="mx-auto my-6 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px]" 
+      width={200} 
+      height={200} 
+      className="mx-auto my-6 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]" 
       />
       <FeaturedProducts/>
       <ChooseCategory />
