@@ -7,6 +7,7 @@ import ItemsMenuMobile from "./items-menu-mobile"
 import ToggleTheme from "./toggle-theme"
 import { useCart } from "@/hooks/use-cart"
 import { useWishlist } from "@/hooks/use-wishlist"
+import ResponsiveLogo from "./responsive-logo"
 
 const NavBar = () => {
     const router = useRouter()
@@ -14,28 +15,35 @@ const NavBar = () => {
     const { wishlistItems } = useWishlist()
 
     return (
-        <div className="flex items-center justify-between p-4 mx-auto sm:max-w-4xl md:max-w-6xl relative z-50 select-none">
-            <h1 className="text-2xl sm:text-3xl cursor-pointer" onClick={() => router.push("/")}>Almacén
-                <span className="font-bold">Criollo</span>
-            </h1>
-            <div className="items-center justify-between cursor-pointer hidden sm:flex">
+        <div className="grid grid-cols-3 items-center p-4 mx-auto sm:max-w-4xl md:max-w-6xl relative z-50 select-none">
+            {/* Columna izquierda: Logo */}
+            <ResponsiveLogo onClick={() => router.push("/")} />
+
+            {/* Columna central: Menú */}
+            <div className="hidden sm:flex justify-center">
                 <MenuList />
             </div>
-            <div className="flex sm:hidden">
+            <div className="flex sm:hidden justify-center">
                 <ItemsMenuMobile />
             </div>
-            <div className="flex items-center justify-between gap-2 sm:gap-7">
+
+            {/* Columna derecha: Íconos */}
+            <div className="flex items-center justify-end gap-2 sm:gap-7">
                 {cart.items.length === 0 ? (
-                    <ShoppingCart className="cursor-pointer" strokeWidth={1} onClick={() => router.push("/cart")} />
+                <ShoppingCart className="cursor-pointer" strokeWidth={1} onClick={() => router.push("/cart")} />
                 ) : (
-                    <div className="flex gap-1" onClick={() => router.push("/cart")}>
-                        <BaggageClaim strokeWidth={1} className="cursor-pointer" />
-                        <span>{cart.items.length}</span>
-                    </div>
+                <div className="flex gap-1" onClick={() => router.push("/cart")}>
+                    <BaggageClaim strokeWidth={1} className="cursor-pointer" />
+                    <span>{cart.items.length}</span>
+                </div>
                 )}
-                <Heart className={`cursor-pointer ${wishlistItems.length > 0 && "fill-black dark:fill-white"}`} strokeWidth={1} onClick={() => router.push("/wishlist")} />
+                <Heart
+                className={`cursor-pointer ${wishlistItems.length > 0 && "fill-black dark:fill-white"}`}
+                strokeWidth={1}
+                onClick={() => router.push("/wishlist")}
+                />
+                <ToggleTheme />
             </div>
-            <ToggleTheme />
         </div>
     )
 }

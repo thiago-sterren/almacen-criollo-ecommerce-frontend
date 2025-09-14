@@ -1,43 +1,43 @@
 import Link from "next/link"
 import { Separator } from "./ui/separator"
 
-const categories = [
-    {
-        id: 1,
-        name: "Vino",
-        link: "/category/vino"
-    },
-    {
-        id: 2,
-        name: "Whisky",
-        link: "/category/whisky"
-    },
-    {
-        id: 3,
-        name: "Otras bebidas",
-        link: "/category/otras-bebidas"
-    },
-    {
-        id: 4,
-        name: "Mate",
-        link: "/category/mate"
-    },
-    {
-        id: 5,
-        name: "Chocolatería",
-        link: "/category/chocolateria"
-    },
-    {
-        id: 6,
-        name: "Cocina",
-        link: "/category/cocina"
-    },
-    {
-        id: 7,
-        name: "Delicatessen",
-        link: "/category/delicatessen"
-    },
-]
+// const categories = [
+//     {
+//         id: 1,
+//         name: "Vino",
+//         link: "/category/vino"
+//     },
+//     {
+//         id: 2,
+//         name: "Whisky",
+//         link: "/category/whisky"
+//     },
+//     {
+//         id: 3,
+//         name: "Otras bebidas",
+//         link: "/category/otras-bebidas"
+//     },
+//     {
+//         id: 4,
+//         name: "Mate",
+//         link: "/category/mate"
+//     },
+//     {
+//         id: 5,
+//         name: "Chocolatería",
+//         link: "/category/chocolateria"
+//     },
+//     {
+//         id: 6,
+//         name: "Cocina",
+//         link: "/category/cocina"
+//     },
+//     {
+//         id: 7,
+//         name: "Delicatessen",
+//         link: "/category/delicatessen"
+//     },
+// ]
 
 const dataFooter = [
     {
@@ -78,19 +78,19 @@ const Footer = () => {
                         </span>
                         E-commerce
                     </p>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 text-gray-500 dark:text-gray-400 pt-5 sm:pt-0 pl-0 md:pl-5">
+                    {/*<ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 text-gray-500 dark:text-gray-400 pt-5 sm:pt-0 pl-0 md:pl-5">
                         {categories.map((data) => (
                             <li key={data.id}>
                                 <Link href={data.link} className="hover:underline me-4 md:me-6 whitespace-nowrap">{data.name}</Link>
                             </li>
                         ))} 
-                    </ul>
+                    </ul>*/}
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 text-gray-500 dark:text-gray-400">
                         {dataFooter.map((data) => (
                             <li key={data.id}>
                                 <Link href={data.link} target="_blank" className="hover:underline me-4 md:me-6 whitespace-nowrap">{data.name}</Link>
                             </li>
-                        ))} 
+                        ))}
                     </ul>
                 </div>
                 <Separator className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

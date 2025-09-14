@@ -19,7 +19,7 @@ const FeaturedProducts = () => {
     const { addItemBySlug } = useCart()
 
     return (
-        <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
+        <div className="max-w-6xl py-2 mx-auto sm:pb-16 sm:px-24">
             <h3 className="px-6 text-3xl sm:pb-8 text-center">Productos destacados</h3>
             <Carousel
             plugins={[
