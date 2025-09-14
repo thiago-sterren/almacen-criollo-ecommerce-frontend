@@ -39,8 +39,7 @@ export default function Page() {
                     {loading && result === null && (
                         <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">Cargando categoría...</h1>
                     )}
-                    <Separator />
-
+                    <Separator className="mt-2" />
                     <div className="sm:flex sm:justify-between">
                         <div className="grid gap-5 mt-8 sm:grid-cols-2 lg:grid-cols-3 md:gap-10">
                             {loading && (
