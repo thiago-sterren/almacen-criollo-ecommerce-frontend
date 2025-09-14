@@ -8,11 +8,17 @@ import { useGetCategoryProducts } from "@/api/useGetCategoryProducts"
 import SkeletonSchema from "@/components/skeleton-schema"
 import { Separator } from "@/components/ui/separator"
 import ProductCard from "./components/product-card"
+import { useEffect, useState } from "react"
 
 export default function Page() {
     const params = useParams()
     const { categorySlug } = params
-    const { result, loading } = useGetCategoryProducts(categorySlug ?? "")
+    const [currentPage, setCurrentPage] = useState(1)
+    const { result, loading, meta } = useGetCategoryProducts(categorySlug ?? "", currentPage)
+
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [categorySlug])
     
     return (
         <>
@@ -47,6 +53,23 @@ export default function Page() {
                             )}
                         </div>
                     </div>
+                </div>
+            )}
+            {meta && (
+                <div className="flex justify-center mt-6 space-x-4">
+                    <button
+                    disabled={meta.page <= 1}
+                    onClick={() => setCurrentPage(meta.page - 1)}
+                    >
+                        Anterior
+                    </button>
+                    <span>Página {meta.page} de {meta.pageCount}</span>
+                    <button
+                    disabled={meta.page >= meta.pageCount}
+                    onClick={() => setCurrentPage(meta.page + 1)}
+                    >
+                        Siguiente
+                    </button>
                 </div>
             )}
         </>
