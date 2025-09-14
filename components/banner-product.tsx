@@ -7,7 +7,7 @@ const BannerProduct = () => {
 
     return (
         <>    
-            <div className="mt-4 text-center">
+            <div className="text-center">
                 <p>Disfrutá de una experiencia increíble</p>
                 <h4 className="mx-2 mt-2 text-4xl font-extrabold uppercase">Chocolate Exquisito</h4>
                 <p className="my-4 text-lg">Despertá tus sentidos con cada bocado</p>

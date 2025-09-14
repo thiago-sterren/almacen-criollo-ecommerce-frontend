@@ -9,7 +9,7 @@ const ChooseCategory = () => {
     const { loading, result } = useGetCategories()
 
     return (
-        <div className="max-w-5xl py-4 mx-auto sm:py-16 sm:px-24">
+        <div className="max-w-6xl mx-auto sm:px-24">
             <h3 className="px-6 pb-4 text-3xl sm:pb-8 text-center">Navegá por tu categoría favorita</h3>
             <div className="flex flex-wrap justify-center gap-5 select-none">
                 {loading && (
