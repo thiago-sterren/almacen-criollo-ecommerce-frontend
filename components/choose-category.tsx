@@ -34,7 +34,7 @@ const ChooseCategory = () => {
                                 fill
                                 sizes="(max-width: 768px) 100vw, 250px"
                                 />
-                                <p className="absolute bottom-2 right-2 px-2 py-1 text-lg font-bold text-white rounded">{categoryName}</p>
+                                <p className="absolute bottom-2 left-2 px-2 py-1 text-lg font-bold text-white rounded">{categoryName}</p>
                             </Link>
                         )
                     })
