@@ -89,14 +89,19 @@ const ListItem = ({
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Vino",
-    href: "/category/vino",
+    title: "Vinos",
+    href: "/category/vinos",
     description: "Todas nuestras variedades en tipos y marcas de vino.",
   },
   {
-    title: "Whisky",
-    href: "/category/whisky",
+    title: "Whiskies",
+    href: "/category/whiskies",
     description: "Para tu viejo, para hacer un presente, o para vos.",
+  },
+  {
+    title: "Espumantes",
+    href: "/category/espumantes",
+    description: "Brindá en cada ocasión especial con nuestra selección de espumantes.",
   },
   {
     title: "Otras bebidas",

@@ -5,35 +5,40 @@ import { Separator } from "./ui/separator"
 //     {
 //         id: 1,
 //         name: "Vino",
-//         link: "/category/vino"
+//         link: "/category/vinos"
 //     },
 //     {
 //         id: 2,
 //         name: "Whisky",
-//         link: "/category/whisky"
+//         link: "/category/whiskies"
 //     },
 //     {
 //         id: 3,
+//         name: "Espumantes",
+//         link: "/category/espumantes"
+//     },
+//     {
+//         id: 4,
 //         name: "Otras bebidas",
 //         link: "/category/otras-bebidas"
 //     },
 //     {
-//         id: 4,
+//         id: 5,
 //         name: "Mate",
 //         link: "/category/mate"
 //     },
 //     {
-//         id: 5,
+//         id: 6,
 //         name: "Chocolatería",
 //         link: "/category/chocolateria"
 //     },
 //     {
-//         id: 6,
+//         id: 7,
 //         name: "Cocina",
 //         link: "/category/cocina"
 //     },
 //     {
-//         id: 7,
+//         id: 8,
 //         name: "Delicatessen",
 //         link: "/category/delicatessen"
 //     },

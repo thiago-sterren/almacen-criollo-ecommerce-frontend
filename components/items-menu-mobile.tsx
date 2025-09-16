@@ -9,8 +9,9 @@ const ItemsMenuMobile = () => {
                 <Menu className="cursor-pointer"/>
             </PopoverTrigger>
             <PopoverContent className="w-44 text-center px-2 py-3 space-y-2">
-                <Link href={"/category/vino"} className="block">Vino</Link>
-                <Link href={"/category/whisky"} className="block">Whisky</Link>
+                <Link href={"/category/vinos"} className="block">Vino</Link>
+                <Link href={"/category/whiskies"} className="block">Whisky</Link>
+                <Link href={"/category/espumantes"} className="block">Espumantes</Link>
                 <Link href={"/category/otras-bebidas"} className="block">Otras bebidas</Link>
                 <Link href={"/category/mate"} className="block">Mate</Link>
                 <Link href={"/category/chocolateria"} className="block">Chocolatería</Link>

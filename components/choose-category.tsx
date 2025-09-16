@@ -13,7 +13,7 @@ const ChooseCategory = () => {
             <h3 className="px-6 pb-4 text-3xl sm:pb-8 text-center">Navegá por tu categoría favorita</h3>
             <div className="flex flex-wrap justify-center gap-5 select-none">
                 {loading && (
-                    Array.from({ length: 7 }).map((_, i) => (
+                    Array.from({ length: 8 }).map((_, i) => (
                         <div key={i} className="w-[250px] h-[250px] bg-gray-200 rounded-lg animate-pulse" />
                     ))
                 )}
