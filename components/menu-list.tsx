@@ -45,7 +45,7 @@ const MenuList = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>} */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Categorías</NavigationMenuTrigger>
           <NavigationMenuContent className="absolute left-1/2 transform -translate-x-1/2">
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (

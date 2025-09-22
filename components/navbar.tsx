@@ -8,6 +8,8 @@ import ToggleTheme from "./toggle-theme"
 import { useCart } from "@/hooks/use-cart"
 import { useWishlist } from "@/hooks/use-wishlist"
 import ResponsiveLogo from "./responsive-logo"
+import SearchInput from "./search-input"
+import SearchSheetMobile from "./search-sheet-mobile"
 
 const NavBar = () => {
     const router = useRouter()
@@ -20,11 +22,13 @@ const NavBar = () => {
             <ResponsiveLogo onClick={() => router.push("/")} />
 
             {/* Columna central: Menú */}
-            <div className="hidden sm:flex justify-center">
+            <div className="hidden sm:flex justify-center gap-2">
                 <MenuList />
+                <SearchInput placeholder="Buscar productos..." />
             </div>
-            <div className="flex sm:hidden justify-center">
+            <div className="flex sm:hidden justify-center gap-4">
                 <ItemsMenuMobile />
+                <SearchSheetMobile />
             </div>
 
             {/* Columna derecha: Íconos */}

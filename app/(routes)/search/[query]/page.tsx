@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation"
 
 import { ProductType } from "@/types/product"
-import { useGetCategoryProducts } from "@/api/useGetCategoryProducts"
+import { useSearchProducts } from "@/api/useSearchProducts"
 
 import SkeletonSchema from "@/components/skeleton-schema"
 import { Separator } from "@/components/ui/separator"
@@ -13,29 +13,29 @@ import { useEffect, useState } from "react"
 
 export default function Page() {
     const params = useParams()
-    const { categorySlug } = params
+    const query = params.query as string
     const [currentPage, setCurrentPage] = useState(1)
-    const { result, loading, meta } = useGetCategoryProducts(categorySlug ?? "", currentPage)
+    const { result, loading, meta } = useSearchProducts(query, currentPage)
 
     useEffect(() => {
         setCurrentPage(1)
-    }, [categorySlug])
+    }, [query])
     
     return (
         <>
             {result && !loading && result.length === 0 ? (
                 <div className="max-w-6xl py-4 mx-auto sm:py-32 sm:px-24">
                     <p className="text-center text-lg text-gray-500">
-                        No se encontraron productos para esta categoría en el sistema.
+                        {`No se encontraron productos coincidentes con su búsqueda "${query}" en el sistema.`}
                     </p>
                 </div>
             ) : (
                 <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
                     {result && result.length > 0 && !loading && (
-                        <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">{result[0].category.categoryName}</h1>
+                        <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">{`Resultados encontrados para la búsqueda "${query}"`}</h1>
                     )}
                     {loading && result === null && (
-                        <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">Cargando categoría...</h1>
+                        <h1 className="text-3xl font-medium px-2 sm:px-0 text-center">Realizando búsqueda...</h1>
                     )}
                     <Separator className="mt-2" />
                     <div className="sm:flex sm:justify-between">
