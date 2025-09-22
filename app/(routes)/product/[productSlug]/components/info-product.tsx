@@ -17,6 +17,13 @@ const InfoProduct = (props: InfoProductProps) => {
     const { addItemBySlug } = useCart()
     const { addItemToWishlist, removeItemFromWishlist, wishlistItems } = useWishlist()
     const itemInWishlist = wishlistItems.some(item => slug === item.slug)
+    const forSale = price > 0
+    const handleClickToAsk = () => {
+        const phoneNumber = "5493493660838"
+        const message = `Hola, quisiera consultar por precio y disponibilidad del producto ${productName}.`
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+        window.open(url, "_blank")
+    }
 
     return (
         <div className="max-w-md mx-auto text-center px-6">
@@ -26,12 +33,20 @@ const InfoProduct = (props: InfoProductProps) => {
             <Separator className="my-4" />
             <p>{description}</p>
             <Separator className="my-4" />
-            <p className="my-4 text-2xl font-bold">{formatPrice(price)}</p>
+            {forSale && (
+                <p className="my-4 text-2xl font-bold">{formatPrice(price)}</p>
+            )}
             <div className="mt-6 flex justify-center">
                 <div className="flex items-center gap-2 w-full max-w-[320px] select-none">
-                    <Button disabled={isSoldOut} className="flex-1 cursor-pointer" onClick={() => addItemBySlug(product.slug)}>
-                        {isSoldOut ? "Agotado" : "Agregar al carrito"}
-                    </Button>
+                    {forSale ? (
+                        <Button disabled={isSoldOut} className="flex-1 cursor-pointer" onClick={() => addItemBySlug(product.slug)}>
+                            {isSoldOut ? "Agotado" : "Agregar al carrito"}
+                        </Button>
+                    ) : (
+                        <Button className="flex-1 cursor-pointer" onClick={handleClickToAsk}>
+                            Consultar precio y stock
+                        </Button>
+                    )}
                     <Heart
                     width={30}
                     strokeWidth={1}

@@ -34,6 +34,7 @@ const FeaturedProducts = () => {
                     {result !== null && (
                         result.map((product: ProductType) => {
                             const { id, slug, images, productName, price } = product
+                            const forSale = price > 0
                             return (
                                 <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group select-none">
                                     <div className="p-1">
@@ -55,18 +56,22 @@ const FeaturedProducts = () => {
                                                         onClick={() => router.push(`product/${slug}`)}
                                                         icon={<Expand size={20} />}
                                                         className="text-gray-600 cursor-pointer" />
-                                                        <IconButton 
-                                                        onClick={() => addItemBySlug(product.slug)}
-                                                        icon={<ShoppingCart size={20} />}
-                                                        className="text-gray-600 cursor-pointer" />
+                                                        {forSale && (
+                                                            <IconButton 
+                                                            onClick={() => addItemBySlug(product.slug)}
+                                                            icon={<ShoppingCart size={20} />}
+                                                            className="text-gray-600 cursor-pointer" />
+                                                        )}
                                                     </div>
                                                 </div>
                                             </CardContent>
                                             <div className="flex justify-between gap-2 px-8">
                                                 <h3 className="text-md font-bold line-clamp-2">{productName}</h3>
-                                                <div className="flex items-center justify-between">
-                                                    <p className="text-md px-2 py-1 text-white bg-black rounded dark:bg-white dark:text-black w-fit">{formatPrice(price)}</p>
-                                                </div>
+                                                {forSale && (
+                                                    <div className="flex items-center justify-between">
+                                                        <p className="text-md px-2 py-1 text-white bg-black rounded dark:bg-white dark:text-black w-fit">{formatPrice(price)}</p>
+                                                    </div>
+                                                )}
                                             </div>
                                         </Card>
                                     </div>

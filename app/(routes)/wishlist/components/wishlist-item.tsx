@@ -16,6 +16,7 @@ const WishlistItem = (props: WishlistItemProps) => {
     const { addItemBySlug } = useCart()
     const { removeItemFromWishlist } = useWishlist()
     const firstProductImageUrl = images?.[0]?.url ?? null
+    const forSale = price > 0
 
     return (
         <li className="flex py-6 border-b select-none">
@@ -23,12 +24,16 @@ const WishlistItem = (props: WishlistItemProps) => {
             <div className="flex justify-between flex-1 px-6">
                 <div>
                     <h2 className="text-lg font-bold">{productName}</h2>
-                    <p>{formatPrice(price)}</p>
-                    <div className="flex gap-3">
-                        <div className="flex items-center justify-center w-[150px] mt-3">
-                            <Button className="w-full cursor-pointer" onClick={() => addItemBySlug(slug)}>Agregar al carrito</Button>
-                        </div>
-                    </div>
+                    {forSale && (
+                        <>
+                            <p>{formatPrice(price)}</p>
+                            <div className="flex gap-3">
+                                <div className="flex items-center justify-center w-[150px] mt-3">
+                                    <Button className="w-full cursor-pointer" onClick={() => addItemBySlug(slug)}>Agregar al carrito</Button>
+                                </div>
+                            </div>
+                        </>
+                    )}
                 </div>
                 <X
                 width={30}

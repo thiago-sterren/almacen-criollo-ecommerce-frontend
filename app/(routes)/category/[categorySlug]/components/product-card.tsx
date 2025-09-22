@@ -16,6 +16,7 @@ interface ProductTypeProps {
 const ProductCard = (props: ProductTypeProps) => {
   const { product } = props
   const { images, productName, slug, price } = product
+  const forSale = price > 0
 
   return (
     <Link
@@ -58,9 +59,11 @@ const ProductCard = (props: ProductTypeProps) => {
         </div>
         <CardContent className="flex justify-between items-center gap-2 px-6 pt-2 pb-4">
           <h3 className="text-md font-bold line-clamp-2">{productName}</h3>
-          <p className="text-md px-1 py-1 text-white bg-black rounded dark:bg-white dark:text-black w-fit">
-            {formatPrice(price)}
-          </p>
+          {forSale && (
+            <p className="text-md px-1 py-1 text-white bg-black rounded dark:bg-white dark:text-black w-fit">
+              {formatPrice(price)}
+            </p>
+          )}
         </CardContent>
       </Card>
     </Link>
