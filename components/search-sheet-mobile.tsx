@@ -1,3 +1,5 @@
+"use client"
+
 import { Search } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet"
 import { useState } from "react"
