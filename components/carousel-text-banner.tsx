@@ -42,7 +42,7 @@ const CarouselTextBanner = () => {
                         <CarouselItem key={id} onClick={() => router.push(link)} className="cursor-pointer select-none">
                             <div>
                                 <Card className="shadow-none border-none bg-transparent">
-                                    <CardContent className="flex flex-col justify-center items-center text-center">
+                                    <CardContent className="h-24 sm:h-14 flex flex-col justify-center items-center text-center">
                                         <p className="text-lg sm:text-xl text-wrap text-bold dark:text-secondary">{title}</p>
                                         <p className="text-sm sm:text-md text-wrap dark:text-secondary">{description}</p>
                                     </CardContent>
