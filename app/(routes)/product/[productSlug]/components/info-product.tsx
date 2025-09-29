@@ -13,11 +13,13 @@ interface InfoProductProps {
 const InfoProduct = (props: InfoProductProps) => {
     const { product } = props
     const { productName, price, description, stock, slug, id } = product
-    const isSoldOut = stock < 1
     const { addItemBySlug } = useCart()
     const { addItemToWishlist, removeItemFromWishlist, wishlistItems } = useWishlist()
     const itemInWishlist = wishlistItems.some(item => slug === item.slug)
+    const isSoldOut = stock < 1
     const forSale = price > 0
+    const lastUnits = stock > 0 && stock <= 5
+
     const handleClickToAsk = () => {
         const phoneNumber = "5493493660838"
         const message = `Hola, quisiera consultar por precio y disponibilidad del producto ${productName}.`
@@ -61,7 +63,7 @@ const InfoProduct = (props: InfoProductProps) => {
                     />
                 </div>
             </div>
-            {stock > 0 && stock <= 5 && (
+            {forSale && lastUnits && (
                 <p className="mt-4 text-sm font-medium">¡Quedan pocas unidades!</p>
             )}
         </div>
