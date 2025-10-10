@@ -8,22 +8,23 @@ import Autoplay from "embla-carousel-autoplay"
 export const dataCarouselTop = [
     {
         id: 1,
+        title: "Podés encontrarnos en Juan B. Justo 361",
+        description: "De lunes a viernes de 9:30 a 12 y 16 a 20, sábados solamente por la mañana",
+        link: "#"
+    },
+    {
+        id: 2,
         title: "Envío en 24hs",
         description: "Tus envíos en 24hs, o podemos programarlos para cuando los desees",
         link: "#"
     },
     {
-        id: 2,
+        id: 3,
         title: "Conseguí un 10% OFF pagando con efectivo",
         description: "Al hacer el checkout, podés elegir la opción de pagar con efectivo al momento de la entrega del pedido",
         link: "#"
     },
-    {
-        id: 3,
-        title: "Cambios y devoluciones gratuitas",
-        description: "Como cliente, tenés cambios y devoluciones sin cargo en un plazo de 3 días",
-        link: "#"
-    },
+    
 ]
 
 const CarouselTextBanner = () => {
