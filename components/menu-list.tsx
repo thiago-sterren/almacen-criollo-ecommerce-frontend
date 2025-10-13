@@ -126,6 +126,6 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: "Fiestas",
     href: "/category/fiestas",
-    description: "Los alimentos de fin de año más ricos están acá, para que recibas el año nuevo con el corazón contento.",
+    description: "Recibí el año nuevo con panza llena y corazón contento.",
   },
 ]
