@@ -21,8 +21,8 @@ const ItemsMenuMobile = () => {
                 <Link href={"/category/otras-bebidas"} onClick={() => setOpen(false)}>Otras bebidas</Link>
                 <Link href={"/category/mate"} onClick={() => setOpen(false)}>Mate</Link>
                 <Link href={"/category/chocolateria"} onClick={() => setOpen(false)}>Chocolatería</Link>
-                <Link href={"/category/cocina"} onClick={() => setOpen(false)}>Cocina</Link>
                 <Link href={"/category/delicatessen"} onClick={() => setOpen(false)}>Delicatessen</Link>
+                <Link href={"/category/fiestas"} onClick={() => setOpen(false)}>Fiestas</Link>
             </SheetContent>
         </Sheet>
     )

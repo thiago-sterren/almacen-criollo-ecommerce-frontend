@@ -119,13 +119,13 @@ const components: { title: string; href: string; description: string }[] = [
     description: "Siempre vas a quedar bien regalando algo de lo que encontrás en esta sección.",
   },
   {
-    title: "Cocina",
-    href: "/category/cocina",
-    description: "Accesorios y utensilios de cocina para dar vida al chef que llevás por dentro.",
-  },
-  {
     title: "Delicatessen",
     href: "/category/delicatessen",
     description: "Gran variedad de embutidos, quesos, escabeches y mucho más para tus picadas.",
+  },
+  {
+    title: "Fiestas",
+    href: "/category/fiestas",
+    description: "Los alimentos de fin de año más ricos están acá, para que recibas el año nuevo con el corazón contento.",
   },
 ]
