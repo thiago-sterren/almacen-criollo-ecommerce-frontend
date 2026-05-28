@@ -8,6 +8,12 @@ export default function CheckoutGuard({ children }: { children: React.ReactNode 
   const [isValid, setIsValid] = useState(false)
 
   useEffect(() => {
+    const isAppLocked = process.env.NEXT_PUBLIC_IS_APP_LOCKED === "true"
+    if (isAppLocked) {
+        router.replace("/")
+        return
+    }
+
     const valid = sessionStorage.getItem("checkoutReady") === "true"
     if (!valid) {
         router.replace("/")

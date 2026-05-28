@@ -14,8 +14,10 @@ export default function Page() {
     const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0)
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
+    const isAppLocked = process.env.NEXT_PUBLIC_IS_APP_LOCKED === "true"
 
     const handleGoToCheckout = async () => {
+        if (isAppLocked) return
         setIsLoading(true)
         try {
             sessionStorage.setItem("checkoutReady", "true")
@@ -54,10 +56,15 @@ export default function Page() {
                                 <p className="select-none">Total:</p>
                                 <p>{formatPrice(totalPrice)}</p>
                             </div>
-                            <div className="flex items-center justify-center w-full mt-3 select-none">
-                                <Button className="w-full cursor-pointer" onClick={handleGoToCheckout} disabled={isLoading}>
+                            <div className="flex flex-col items-center justify-center w-full mt-3 select-none">
+                                <Button className="w-full cursor-pointer" onClick={handleGoToCheckout} disabled={isLoading || isAppLocked}>
                                     {isLoading ? "Cargando..." : "Realizar pedido"}
                                 </Button>
+                                {isAppLocked && (
+                                    <p className="mt-2 text-xs font-semibold text-center text-red-500">
+                                        Lo sentimos, las compras se encuentran temporalmente suspendidas.
+                                    </p>
+                                )}
                             </div>
                         </div>
                     </div>
